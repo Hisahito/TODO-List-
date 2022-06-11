@@ -4,7 +4,8 @@
   "description": "Este es un cascaron de un proyecto de webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Hisahito/webpack-initial/issues"
   },
-  "homepage": "https://github.com/Hisahito/webpack-initial#readme"
+  "homepage": "https://github.com/Hisahito/webpack-initial#readme",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  }
 }
