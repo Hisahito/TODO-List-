@@ -1,0 +1,19 @@
+{
+  "name": "webpack-inicial",
+  "version": "1.0.0",
+  "description": "Este es un cascaron de un proyecto de webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hisahito/webpack-initial.git"
+  },
+  "author": "Hisahito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hisahito/webpack-initial/issues"
+  },
+  "homepage": "https://github.com/Hisahito/webpack-initial#readme"
+}
