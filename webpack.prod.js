@@ -38,6 +38,16 @@ module.exports = {
                 options: {
                     name: 'assets/img/[name].[ext]',
                 }
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             }
         ]
     },
