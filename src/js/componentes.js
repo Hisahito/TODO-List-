@@ -8,6 +8,7 @@ const txtInput      = document.querySelector('.new-todo');
 const btnBorrar     = document.querySelector('.clear-completed');
 const ulFiltros     = document.querySelector('.filters');
 const anchorFiltros = document.querySelectorAll('.filtro')
+const tareasPen     = document.querySelector('.todo-count');
 
 export const crearTodoHtml = ( todo ) => {
 
@@ -27,6 +28,7 @@ export const crearTodoHtml = ( todo ) => {
     divTodoList.append( div.firstElementChild );
 
     return div.firstElementChild;
+    counter();
 
 }
 
@@ -40,6 +42,7 @@ txtInput.addEventListener('keyup', ( event ) => {
 
         crearTodoHtml( nuevoTodo );
         txtInput.value = '';
+        counter()
 
     }
 });
@@ -58,7 +61,7 @@ divTodoList.addEventListener('click', ( event ) => {
         todoList.eliminarTodo( todoId )
         divTodoList.removeChild( todoElemento );
     }
-
+    counter()
 
 
 });
@@ -74,7 +77,7 @@ btnBorrar.addEventListener('click', () => {
             divTodoList.removeChild(elemento);
         }
     }
-
+    counter()
 })
 
 ulFiltros.addEventListener('click', (event) => {
@@ -105,4 +108,10 @@ ulFiltros.addEventListener('click', (event) => {
         }
 
     }
+    counter()
 })
+
+const counter = () => {
+    tareasPen.innerHTML = `
+    <strong>${todoList.taskDoneCounter()}</strong> pendiente(s)`;
+};

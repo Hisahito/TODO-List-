@@ -53,4 +53,8 @@ export class TodoList {
         this.todos = this.todos.map( obj => Todo.fromJson( obj ) );
 
     }
+
+    taskDoneCounter() {
+        return this.todos.filter(todo => !todo.completado).length;
+    }
 }
